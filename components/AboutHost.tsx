@@ -11,7 +11,7 @@ export function AboutHost() {
           <div className="md:w-2/3 md:pl-8">
             <h2 className="text-3xl font-bold mb-4">About Your Host</h2>
             <p className="mb-4">
-              With over a decade of experience in real estate and technology, I've helped hundreds of real estate
+              With over a decade of experience in real estate and technology, I&apos;ve helped hundreds of real estate
               professionals transform their businesses through automation. My passion is identifying unique
               opportunities for each client and implementing tailored solutions that drive real results.
             </p>
@@ -20,7 +20,7 @@ export function AboutHost() {
               we discuss any fees. This ensures you see tangible value from our collaboration from day one.
             </p>
             <p>
-              Join me in this masterclass, and let's unlock the full potential of your real estate business through the
+              Join me in this masterclass, and let&apos;s unlock the full potential of your real estate business through the
               power of automation!
             </p>
           </div>

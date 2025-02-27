@@ -8,8 +8,6 @@
   }
 }
 
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -66,12 +64,11 @@
   }
 }
 
-
-
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-[hsl(var(--border))] outline-[hsl(var(--ring))]/50;
   }
+  
   body {
     @apply bg-background text-foreground;
   }

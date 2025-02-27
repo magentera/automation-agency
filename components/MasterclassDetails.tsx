@@ -2,13 +2,13 @@ export function MasterclassDetails() {
   return (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">What You'll Learn</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center">What You&apos;ll Learn</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Masterclass Overview</h3>
             <p className="mb-4">
               Our real estate automation masterclass is designed to give you actionable tips and real-life examples to
-              revolutionize your business. You'll learn how to leverage technology to save time, increase efficiency,
+              revolutionize your business. You&apos;ll learn how to leverage technology to save time, increase efficiency,
               and grow your profits.
             </p>
             <ul className="list-disc list-inside space-y-2">
