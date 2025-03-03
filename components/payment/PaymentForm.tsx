@@ -66,7 +66,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ paymentDetails }) => {
       
       // Redirect to confirmation page
       router.push(`/payment/confirmation?paymentId=pay_${Date.now()}&invoiceId=${paymentDetails.invoiceNumber}`);
-    } catch (err) {
+    } catch {
       setError('There was an error processing your payment. Please try again.');
       setIsProcessing(false);
     }

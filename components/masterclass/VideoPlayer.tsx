@@ -3,13 +3,11 @@
 import React, { useState, useEffect } from 'react';
 
 interface VideoPlayerProps {
-  streamUrl: string;
   isLive: boolean;
   thumbnailUrl?: string;
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ 
-  streamUrl, 
   isLive, 
   thumbnailUrl = '/images/default-thumbnail.jpg' 
 }) => {
@@ -25,6 +23,10 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
+      // Simulate occasional loading error for demonstration
+      if (Math.random() < 0.1) {
+        setError('Failed to load video. Please refresh the page.');
+      }
       if (isLive) {
         // For live streams, we don't have a fixed duration
         setDuration(0);
@@ -32,7 +34,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         // For recorded videos, set a mock duration (in seconds)
         setDuration(3600); // 1 hour
       }
-    }, 1500);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [isLive]);

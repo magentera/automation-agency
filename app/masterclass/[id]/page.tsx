@@ -13,9 +13,10 @@ type MasterclassPageProps = {
 
 export async function generateMetadata({ params }: MasterclassPageProps) {
   // This would fetch the masterclass data from an API in a real implementation
+  const masterclassId = params.id;
   const masterclass = {
     title: 'Building a 7-Figure Personal Brand',
-    description: 'Learn how to build and monetize your personal brand.',
+    description: `Learn how to build and monetize your personal brand. Masterclass ID: ${masterclassId}`,
   };
 
   return {
@@ -34,7 +35,6 @@ export default function MasterclassPage({ params }: MasterclassPageProps) {
     host: 'Jane Smith',
     description: 'Learn how to build and monetize your personal brand with proven strategies from top influencers.',
     isLive: true,
-    streamUrl: 'https://example.com/stream',
   };
 
   // Mock notifications that would be triggered at specific timestamps
@@ -50,7 +50,7 @@ export default function MasterclassPage({ params }: MasterclassPageProps) {
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
-          <VideoPlayer streamUrl={masterclass.streamUrl} isLive={masterclass.isLive} />
+          <VideoPlayer isLive={masterclass.isLive} />
           <div className="mt-4">
             <NotificationSystem notifications={notifications} />
           </div>

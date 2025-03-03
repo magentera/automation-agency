@@ -203,7 +203,7 @@ const TranscriptDisplay: React.FC<TranscriptDisplayProps> = ({ masterclassId }) 
                 </div>
               ) : (
                 <div className="text-center py-8 text-gray-500">
-                  <p>No results found for "{searchQuery}"</p>
+                  <p>No results found for &quot;{searchQuery}&quot;</p>
                 </div>
               )}
             </div>

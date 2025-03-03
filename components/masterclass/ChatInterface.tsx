@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 interface Message {
   id: string;
@@ -227,9 +228,11 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ masterclassId }) => {
                   <div className="flex-shrink-0 mr-2">
                     <div className="w-8 h-8 rounded-full bg-gray-300 overflow-hidden">
                       {message.sender.photoUrl ? (
-                        <img 
+                        <Image 
                           src={message.sender.photoUrl} 
                           alt={message.sender.name} 
+                          width={32}
+                          height={32}
                           className="w-full h-full object-cover"
                         />
                       ) : (

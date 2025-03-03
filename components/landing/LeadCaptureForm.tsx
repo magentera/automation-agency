@@ -39,7 +39,7 @@ const LeadCaptureForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       setIsSubmitted(true);
-    } catch (err) {
+    } catch {
       setError('There was an error submitting your registration. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -66,7 +66,7 @@ const LeadCaptureForm: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2">Registration Successful!</h3>
               <p className="mb-6">
-                Thank you for registering for our masterclass. We've sent a confirmation email with all the details to your inbox.
+                Thank you for registering for our masterclass. We&apos;ve sent a confirmation email with all the details to your inbox.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 

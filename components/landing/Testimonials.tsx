@@ -27,7 +27,7 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              "Before this masterclass, I was struggling to monetize my fitness content beyond sponsored posts. Jane's strategies helped me launch a coaching program that generated $127,000 in its first quarter. The ROI on this masterclass has been incredible!"
+              &quot;Before this masterclass, I was struggling to monetize my fitness content beyond sponsored posts. Jane&apos;s strategies helped me launch a coaching program that generated $127,000 in its first quarter. The ROI on this masterclass has been incredible!&quot;
             </p>
             <div className="text-indigo-600 font-semibold">
               Results: $127K in 3 months
@@ -54,7 +54,7 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              "I had a decent following but no clear monetization strategy. After implementing Jane's content framework and sales system, I launched a digital product that sold 1,500 copies in the first month. This masterclass changed my entire business model!"
+              &quot;I had a decent following but no clear monetization strategy. After implementing Jane&apos;s content framework and sales system, I launched a digital product that sold 1,500 copies in the first month. This masterclass changed my entire business model!&quot;
             </p>
             <div className="text-indigo-600 font-semibold">
               Results: $75K in digital product sales
@@ -81,7 +81,7 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              "I was already making good money as a coach, but Jane's scaling strategies helped me create a group program that tripled my revenue while reducing my working hours. The systems she teaches are game-changing for service providers."
+              &quot;I was already making good money as a coach, but Jane&apos;s scaling strategies helped me create a group program that tripled my revenue while reducing my working hours. The systems she teaches are game-changing for service providers.&quot;
             </p>
             <div className="text-indigo-600 font-semibold">
               Results: 3x revenue, 50% less work
