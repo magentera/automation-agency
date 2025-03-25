@@ -10,7 +10,7 @@ import { Slider } from "@/components/ui/slider"
 import { RefreshCw, Maximize, Minimize, Wind, Lock, Unlock } from "lucide-react"
 
 // Particle system component - fixed to prevent buffer resizing error
-function ParticleSystem({ count = 1000, color = "#00b8d4", spread = 10, size = 0.05 }) {
+function ParticleSystem({ count = 3000, color = "#3B82F6", spread = 15, size = 0.2 }) {
   const points = useRef(null)
   const particleCount = useRef(count)
   const initialized = useRef(false)
@@ -18,22 +18,32 @@ function ParticleSystem({ count = 1000, color = "#00b8d4", spread = 10, size = 0
   // Create a fixed-size buffer for positions
   const positionsRef = useRef(new Float32Array(count * 3))
   const velocitiesRef = useRef(new Float32Array(count * 3))
+  const anglesRef = useRef(new Float32Array(count * 2)) // Store theta and phi angles
+  const radiusRef = useRef(new Float32Array(count)) // Store radius for each particle
+  const speedRef = useRef(new Float32Array(count)) // Store orbital speed for each particle
 
   // Initialize positions and velocities
   useEffect(() => {
+    const angles = anglesRef.current
+    const radius = radiusRef.current
+    const speed = speedRef.current
     const positions = positionsRef.current
-    const velocities = velocitiesRef.current
 
-    for (let i = 0; i < count * 3; i += 3) {
-      // Initialize positions
-      positions[i] = (Math.random() - 0.5) * spread
-      positions[i + 1] = (Math.random() - 0.5) * spread
-      positions[i + 2] = (Math.random() - 0.5) * spread
+    for (let i = 0; i < count; i++) {
+      // Random spherical coordinates
+      angles[i * 2] = Math.random() * Math.PI * 2 // theta (horizontal angle)
+      angles[i * 2 + 1] = Math.acos((Math.random() * 2) - 1) // phi (vertical angle)
+      radius[i] = spread * (0.7 + Math.random() * 0.3) // Varying radius
+      speed[i] = (0.2 + Math.random() * 0.3) * 0.001 // Random orbital speed
 
-      // Initialize velocities
-      velocities[i] = (Math.random() - 0.5) * 0.01
-      velocities[i + 1] = (Math.random() - 0.5) * 0.01
-      velocities[i + 2] = (Math.random() - 0.5) * 0.01
+      // Convert spherical to cartesian coordinates
+      const theta = angles[i * 2]
+      const phi = angles[i * 2 + 1]
+      const r = radius[i]
+
+      positions[i * 3] = r * Math.sin(phi) * Math.cos(theta)
+      positions[i * 3 + 1] = r * Math.cos(phi)
+      positions[i * 3 + 2] = r * Math.sin(phi) * Math.sin(theta)
     }
 
     initialized.current = true
@@ -44,25 +54,27 @@ function ParticleSystem({ count = 1000, color = "#00b8d4", spread = 10, size = 0
     if (!points.current || !initialized.current) return
 
     const positions = positionsRef.current
-    const velocities = velocitiesRef.current
+    const angles = anglesRef.current
+    const radius = radiusRef.current
+    const speed = speedRef.current
     const geometry = points.current.geometry
 
-    // Make sure the geometry has a position attribute
     if (!geometry.attributes.position) return
 
-    for (let i = 0; i < particleCount.current * 3; i += 3) {
-      // Update positions based on velocities
-      positions[i] += velocities[i]
-      positions[i + 1] += velocities[i + 1]
-      positions[i + 2] += velocities[i + 2]
+    for (let i = 0; i < particleCount.current; i++) {
+      // Update theta angle for orbital motion
+      angles[i * 2] += speed[i]
 
-      // Boundary check and bounce
-      if (Math.abs(positions[i]) > spread / 2) velocities[i] *= -1
-      if (Math.abs(positions[i + 1]) > spread / 2) velocities[i + 1] *= -1
-      if (Math.abs(positions[i + 2]) > spread / 2) velocities[i + 2] *= -1
+      const theta = angles[i * 2]
+      const phi = angles[i * 2 + 1]
+      const r = radius[i]
+
+      // Update positions based on new angles
+      positions[i * 3] = r * Math.sin(phi) * Math.cos(theta)
+      positions[i * 3 + 1] = r * Math.cos(phi)
+      positions[i * 3 + 2] = r * Math.sin(phi) * Math.sin(theta)
     }
 
-    // Update the buffer attribute with new positions
     geometry.attributes.position.needsUpdate = true
   })
 
@@ -327,28 +339,13 @@ function Dot({ position, color, size = 0.3, constrainMovement = true }) {
   )
 }
 
-// Floor for physics
-function Floor() {
-  const [ref] = usePlane(() => ({
-    rotation: [-Math.PI / 2, 0, 0],
-    position: [0, -5, 0],
-    type: "static",
-  }))
-
-  return (
-    <mesh ref={ref} receiveShadow>
-      <planeGeometry args={[30, 30]} />
-      <meshStandardMaterial color="#111" transparent opacity={0.2} />
-    </mesh>
-  )
-}
 
 // Main scene component
 export default function InteractiveScene() {
-  const [particleCount, setParticleCount] = useState(1000)
-  const [particleSize, setParticleSize] = useState(0.05)
-  const [particleSpread, setParticleSpread] = useState(10)
-  const [showControls, setShowControls] = useState(true)
+  const [particleCount, setParticleCount] = useState(4500)
+  const [particleSize, setParticleSize] = useState(.5)
+  const [particleSpread, setParticleSpread] = useState(25)
+  const [showControls, setShowControls] = useState(false)
   const [shapeConstrained, setShapeConstrained] = useState(true)
 
   // Reset function to restore original positions
@@ -358,67 +355,71 @@ export default function InteractiveScene() {
 
   return (
     <>
-      <Canvas shadows camera={{ position: [0, 0, 15], fov: 60 }}>
-        <color attach="background" args={["#050505"]} />
+      <Canvas shadows camera={{ position: [0, 0, 50], fov: 60 }}>
         <ambientLight intensity={0.4} />
         <spotLight position={[10, 10, 10]} angle={0.3} penumbra={1} intensity={1} castShadow />
 
         <Physics gravity={[0, -0.2, 0]}>
           {/* Lines */}
           <Line
-            position={[-2, 0, 0]}
+            position={[-1, 0, 0]}
             rotation={[0, 0, 0]}
-            scale={[1, 4, 1]}
+            scale={[1, 8, 1]}
             color="#00b8d4"
             constrainMovement={shapeConstrained}
           />
           <Line
-            position={[-0.5, 1, 0]}
+            position={[0, 0, 0]}
             rotation={[0, 0, 0]}
-            scale={[1, 6, 1]}
+            scale={[1, 14, 1]}
             color="#00bcd4"
             constrainMovement={shapeConstrained}
           />
           <Line
             position={[1, 0, 0]}
             rotation={[0, 0, 0]}
-            scale={[1, 8, 1]}
+            scale={[1, 16, 1]}
             color="#00c8d4"
             constrainMovement={shapeConstrained}
           />
           <Line
-            position={[2.5, -1, 0]}
+            position={[2, 0, 0]}
             rotation={[0, 0, 0]}
-            scale={[1, 5, 1]}
+            scale={[1, 14, 1]}
             color="#00d4d4"
             constrainMovement={shapeConstrained}
           />
           <Line
-            position={[4, 0, 0]}
+            position={[3, 0, 0]}
             rotation={[0, 0, 0]}
-            scale={[1, 4, 1]}
+            scale={[1, 8, 1]}
             color="#3f51b5"
             constrainMovement={shapeConstrained}
           />
 
           {/* Dots */}
-          <Dot position={[-2, 3, 0]} color="#00b8d4" size={0.3} constrainMovement={shapeConstrained} />
-          <Dot position={[-0.5, 5, 0]} color="#00bcd4" size={0.3} constrainMovement={shapeConstrained} />
-          <Dot position={[2.5, -4, 0]} color="#00d4d4" size={0.3} constrainMovement={shapeConstrained} />
-          <Dot position={[4, -2, 0]} color="#3f51b5" size={0.3} constrainMovement={shapeConstrained} />
+          <Dot position={[-1, 5, 0]} color="#00b8d4" size={0.4} constrainMovement={shapeConstrained} />
+          <Dot position={[1, 9, 0]} color="#00bcd4" size={0.4} constrainMovement={shapeConstrained} />
+          <Dot position={[1, -9, 0]} color="#00d4d4" size={0.4} constrainMovement={shapeConstrained} />
+          <Dot position={[3, -5, 0]} color="#3f51b5" size={0.4} constrainMovement={shapeConstrained} />
 
-          <Floor />
         </Physics>
 
         <ParticleSystem count={particleCount} size={particleSize} spread={particleSpread} />
 
-        <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
+        <OrbitControls 
+          //enablePan={true} 
+          //enableZoom={true} 
+          enableRotate={true}
+          autoRotate={true}
+          autoRotateSpeed={1}
+        />
 
-        <Stats />
+        {/* <Stats /> */}
       </Canvas>
 
       {/* Controls UI */}
-      <div className="absolute bottom-4 left-4 right-4 p-4 bg-black/70 rounded-lg text-white">
+      {showControls && (<div className="absolute bottom-4 left-4 right-4 p-4 bg-black/70 rounded-lg text-white">
         <div className="flex justify-between items-center mb-2">
           <h3 className="text-lg font-bold">Particle Controls</h3>
           <Button variant="outline" size="icon" onClick={() => setShowControls(!showControls)}>
@@ -426,7 +427,7 @@ export default function InteractiveScene() {
           </Button>
         </div>
 
-        {showControls && (
+        { (
           <div className="space-y-4">
             <div className="space-y-2">
               <div className="flex justify-between">
@@ -513,7 +514,7 @@ export default function InteractiveScene() {
         <div className="mt-4 text-xs text-gray-400">
           Drag elements to move them • Use mouse wheel to zoom • Click and drag to rotate
         </div>
-      </div>
+      </div>)}
     </>
   )
 }

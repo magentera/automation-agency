@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ChevronDown, ArrowRight } from "lucide-react"
+import InteractiveScene from "@/components/interactivelogo"
+
 
 export default function Hero() {
   return (
@@ -50,14 +52,15 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex justify-center">
-            <Image
+          <div className="flex justify-center h-[500px]">
+            <InteractiveScene />
+            {/* <Image
               src="/konuke.png"
               alt="AI Network Visualization"
               width={250}
               height={250}
               className="w-full/2 max-w-md"
-            />
+            /> */}
           </div>
         </div>
       </section>
