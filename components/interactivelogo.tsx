@@ -1,10 +1,11 @@
 "use client"
 
 import { useRef, useState, useEffect } from "react"
-import { Canvas, useFrame, useThree } from "@react-three/fiber"
+import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber"
 import { OrbitControls, Stats } from "@react-three/drei"
 import { Physics, useSphere, useBox, usePlane } from "@react-three/cannon"
 import * as THREE from "three"
+import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 import { Button } from "@/components/ui/button"
 import { Slider } from "@/components/ui/slider"
 import { RefreshCw, Maximize, Minimize, Wind, Lock, Unlock } from "lucide-react"
@@ -339,6 +340,17 @@ function Dot({ position, color, size = 0.3, constrainMovement = true }) {
   )
 }
 
+function STLModel({ url, color = "#607D8B", scale = 0.1, ...props }) {
+    const geometry = useLoader(STLLoader, url)
+    const meshRef = useRef(null)
+  
+    return (
+      <mesh ref={meshRef} geometry={geometry} scale={scale} {...props}>
+        <meshStandardMaterial color={color} metalness={0.3} roughness={0.5} />
+      </mesh>
+    )
+  }
+
 
 // Main scene component
 export default function InteractiveScene() {
@@ -347,6 +359,7 @@ export default function InteractiveScene() {
   const [particleSpread, setParticleSpread] = useState(25)
   const [showControls, setShowControls] = useState(false)
   const [shapeConstrained, setShapeConstrained] = useState(true)
+
 
   // Reset function to restore original positions
   const resetScene = () => {
@@ -403,7 +416,9 @@ export default function InteractiveScene() {
           <Dot position={[1, -9, 0]} color="#00d4d4" size={0.4} constrainMovement={shapeConstrained} />
           <Dot position={[3, -5, 0]} color="#3f51b5" size={0.4} constrainMovement={shapeConstrained} />
 
+
         </Physics>
+        <STLModel url="/konuke.stl" scale={0.1} rotation={[-Math.PI / 2, 0, 0]} />
 
         <ParticleSystem count={particleCount} size={particleSize} spread={particleSpread} />
 
