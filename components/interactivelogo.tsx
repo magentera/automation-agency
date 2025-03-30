@@ -340,7 +340,7 @@ function Dot({ position, color, size = 0.3, constrainMovement = true }) {
   )
 }
 
-function STLModel({ url, color = "#607D8B", scale = 0.1, ...props }) {
+function STLModel({ url, color = "#607D8B", scale = 1, ...props }) {
     const geometry = useLoader(STLLoader, url)
     const meshRef = useRef(null)
   
@@ -374,7 +374,7 @@ export default function InteractiveScene() {
 
         <Physics gravity={[0, -0.2, 0]}>
           {/* Lines */}
-          <Line
+          {/* <Line
             position={[-1, 0, 0]}
             rotation={[0, 0, 0]}
             scale={[1, 8, 1]}
@@ -408,17 +408,17 @@ export default function InteractiveScene() {
             scale={[1, 8, 1]}
             color="#3f51b5"
             constrainMovement={shapeConstrained}
-          />
+          /> */}
 
           {/* Dots */}
-          <Dot position={[-1, 5, 0]} color="#00b8d4" size={0.4} constrainMovement={shapeConstrained} />
+          {/* <Dot position={[-1, 5, 0]} color="#00b8d4" size={0.4} constrainMovement={shapeConstrained} />
           <Dot position={[1, 9, 0]} color="#00bcd4" size={0.4} constrainMovement={shapeConstrained} />
           <Dot position={[1, -9, 0]} color="#00d4d4" size={0.4} constrainMovement={shapeConstrained} />
-          <Dot position={[3, -5, 0]} color="#3f51b5" size={0.4} constrainMovement={shapeConstrained} />
+          <Dot position={[3, -5, 0]} color="#3f51b5" size={0.4} constrainMovement={shapeConstrained} /> */}
 
 
         </Physics>
-        <STLModel url="/konuke.stl" scale={0.1} rotation={[-Math.PI / 2, 0, 0]} />
+        <STLModel url="/konuke.stl" scale={5} position={[-8,-3,0]} />
 
         <ParticleSystem count={particleCount} size={particleSize} spread={particleSpread} />
 
