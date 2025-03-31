@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react"
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber"
-import { OrbitControls, Stats } from "@react-three/drei"
+import { CameraControls, OrbitControls, Stats } from "@react-three/drei"
 import { Physics, useSphere, useBox, usePlane } from "@react-three/cannon"
 import * as THREE from "three"
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
@@ -424,11 +424,13 @@ export default function InteractiveScene() {
 
         <OrbitControls 
           //enablePan={true} 
-          //enableZoom={true} 
+          enableZoom={false} 
           enableRotate={true}
           autoRotate={true}
           autoRotateSpeed={1}
         />
+         <CameraControls dollySpeed={0} />
+
 
         {/* <Stats /> */}
       </Canvas>
