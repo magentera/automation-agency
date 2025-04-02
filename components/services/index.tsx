@@ -10,7 +10,7 @@ const servicesData = [
         title: "Strategy Intensives",
         subtitle: "Deep-Dive Consulting",
         description:
-            "We spend a focused period—one day to one week—identifying bottlenecks and opportunities in your operations and sales processes. By the end, you’ll have a clear roadmap to automate and streamline workflows.",
+            "We spend a focused period—one day to one week—identifying bottlenecks and opportunities in your operations. By the end, you’ll have a clear roadmap to automate and streamline workflows.",
         price: "Starting at $5K",
     },
     {
@@ -41,7 +41,7 @@ const servicesData = [
 
 export default function Services() {
     return (
-        <div className="min-h-screen bg-gray-50 text-gray-800">
+        <div className="min-h-screen text-gray-800">
             {/* Hero Section */}
             <div className="relative overflow-hidden bg-white">
                 <div className="mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:py-24">
@@ -72,7 +72,7 @@ export default function Services() {
                                 {service.title}
                             </h2>
                             <h3 className="mt-1 text-lg text-gray-700">{service.subtitle}</h3>
-                            <p className="mt-4 text-gray-600">{service.description}</p>
+                            <p className="mt-4 text-gray-600 line-clamp-4">{service.description}</p>
                             <div className="mt-4 flex items-center justify-between">
                                 <p className="text-lg font-semibold text-blue-500">
                                     {service.price}

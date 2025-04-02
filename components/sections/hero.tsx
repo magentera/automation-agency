@@ -42,7 +42,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="hidden lg:flex justify-center h-[500px]">
+          <div className=" overflow-hidden hidden lg:flex justify-center h-[500px] touch-none pointer-events-auto">
             <InteractiveScene />
             {/* <Image
               src="/konuke.png"

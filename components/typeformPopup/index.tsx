@@ -69,7 +69,7 @@ const TypeformPopup = ({ hookType, text }: { hookType: HookType, text?: string }
     }
 
     return (
-        <button onClick={handleOpenPopup}>
+        <button className="" onClick={handleOpenPopup}>
             {getHookType(hookType, text)}
         </button>
     )
