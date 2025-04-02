@@ -6,54 +6,54 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export default function FaqSection() {
   const faqItems = [
     {
-      question: "What is Enterprise AI?",
+      question: "What services does Konuke agency provide?",
       answer:
-        "Enterprise AI refers to artificial intelligence solutions designed specifically for business applications. It integrates advanced machine learning capabilities into corporate infrastructure to automate processes, enhance decision-making, and drive innovation across departments.",
+        'We specialize in workflow management and process improvements. Our services include auditing current workflows, identifying inefficiencies, recommending improvement strategies, and implementing streamlined processes to help teams reduce errors, save time, and boost productivity.'
     },
     {
-      question: "How does Enterprise AI benefit businesses?",
+      question: "What types of organizations or industries does Konuke work with?",
       answer:
-        "Enterprise AI delivers numerous benefits including increased operational efficiency, reduced costs, improved customer experiences, data-driven decision making, and the ability to identify new market opportunities. It can automate repetitive tasks, analyze vast amounts of data, and provide actionable insights that human analysis might miss.",
+        "We serve a variety of organizations—ranging from startups to established enterprises—in industries such as healthcare, finance, logistics, tech, retail, and professional services. Because workflow principles are broadly applicable, our methods can adapt to nearly any sector."
     },
     {
-      question: "What are common use cases for Enterprise AI?",
+      question: "How does Konuke evaluate a client’s existing workflows?",
       answer:
-        "Common Enterprise AI use cases include customer service automation (chatbots), predictive maintenance, fraud detection, supply chain optimization, personalized marketing, sales forecasting, HR process automation, risk assessment, and product recommendation systems.",
+        "We begin with a comprehensive assessment, which may include stakeholder interviews, process mapping, and data analysis. This allows us to pinpoint inefficiencies and bottlenecks, then develop a structured plan to optimize or redesign those workflows."
     },
     {
-      question: "How does Konuke fit into the Enterprise AI landscape?",
+      question: "What is the typical ROI of workflow improvements?",
       answer:
-        "Konuke provides a comprehensive platform that simplifies the implementation and management of AI solutions within enterprise environments. It bridges the gap between complex AI technologies and practical business applications, offering tools that enable companies to deploy AI without extensive technical expertise.",
+        "Return on investment often comes in the form of cost savings, reduced turnaround times, increased employee satisfaction, improved customer experience, or better compliance outcomes. While each project is unique, our goal is always to deliver measurable improvements that justify the project’s cost."
     },
     {
-      question: "What features does Konuke offer for building applications?",
+      question: "How long do projects usually take?",
       answer:
-        "Konuke offers features such as pre-built AI models, no-code/low-code development interfaces, data integration tools, automated machine learning (AutoML), model monitoring and management, scalable infrastructure, and enterprise-grade security controls.",
+        "This varies based on scope and complexity. Smaller improvement initiatives might be completed in a few weeks, whereas larger, organizational-wide overhauls can extend over several months. We tailor each engagement timeline to meet the client’s specific needs and priorities."
     },
     {
-      question: "Is Konuke compliant with data protection regulations?",
+      question: "Does Konuke offer ongoing support after the initial improvement phase?",
       answer:
-        "Yes, Konuke is designed with compliance in mind. It adheres to major data protection regulations including GDPR, CCPA, HIPAA, and other industry-specific standards. The platform includes features for data governance, consent management, and audit trails to help enterprises maintain regulatory compliance.",
+        "Yes. We offer continued support through training, regular check-ins, and performance assessments to ensure that your new processes remain effective. We can also provide additional recommendations or refinements over time as your organization evolves."
     },
     {
-      question: "Can Konuke be used across different industries?",
+      question: "How are Konuke's services priced?",
       answer:
-        "Absolutely. Konuke is designed to be industry-agnostic while offering specialized capabilities for sectors such as healthcare, finance, retail, manufacturing, and telecommunications. The platform can be customized to address specific industry challenges and requirements.",
+        "We typically use either a project-based fee model or hourly consulting rates, depending on the engagement’s scope and duration. After an initial consultation, we’ll provide a detailed proposal that outlines the project deliverables, timeline, and budget."
     },
     {
-      question: "How does Konuke ensure data security?",
+      question: "What kind of results can we expect once our workflows are improved?",
       answer:
-        "Konuke implements multiple layers of security including encryption (both in transit and at rest), role-based access controls, secure authentication methods, regular security audits, and compliance with industry standards. The platform also provides tools for data anonymization and privacy-preserving AI techniques.",
+        "Most clients see a notable increase in efficiency, reduction in errors, higher employee morale, and smoother interdepartmental collaboration. Over time, improved workflows can also lead to better customer satisfaction and scalable growth."
     },
     {
-      question: "What kind of support does Konuke provide for enterprise clients?",
+      question: "How do we get started or request a consultation?",
       answer:
-        "Konuke offers comprehensive support including dedicated account managers, 24/7 technical support, implementation assistance, regular training sessions, detailed documentation, and a knowledge base. Enterprise clients also receive prioritized issue resolution and access to AI specialists for consultation.",
+        "Simply reach out to our team through our website contact form, email, or phone. We’ll set up an initial discovery call to learn more about your current challenges and goals. From there, we’ll propose a tailored action plan."
     },
     {
-      question: "How can businesses get started with Konuke?",
+      question: "Why should we work with Konuke instead of a larger consulting firm?",
       answer:
-        "Businesses can get started with Konuke by requesting a demo, signing up for a free trial, or consulting with our solutions team. The onboarding process includes initial assessment, customized implementation planning, data integration, user training, and ongoing optimization support.",
+        "We combine deep expertise in workflow management with a personalized, hands-on approach. Our team focuses on building strong client relationships, delivering measurable results, and ensuring that the changes we implement align with your company’s mission and values."
     },
   ]
 
