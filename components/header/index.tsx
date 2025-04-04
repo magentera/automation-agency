@@ -19,22 +19,19 @@ export default function Header() {
             <nav className="hidden md:flex items-center space-x-6">
                 <div className="flex items-center">
                     <Link href="#solutions" className="text-gray-700 hover:text-gray-900 font-medium">
-                        Solutions
+                        Services
                     </Link>
                     {/* <ChevronDown className="ml-1 h-4 w-4 text-gray-500" /> */}
                 </div>
-                {/* <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-                    Pricing
+                <Link href="#team" className="text-gray-700 hover:text-gray-900 font-medium">
+                    Team
                 </Link>
-                <div className="flex items-center">
-                    <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-                        Resources
-                    </Link>
-                    <ChevronDown className="ml-1 h-4 w-4 text-gray-500" />
-                </div>
-                <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+                <Link href="#faq" className="text-gray-700 hover:text-gray-900 font-medium">
+                    FAQ
+                </Link>
+                <Link href="#contact" className="text-gray-700 hover:text-gray-900 font-medium">
                     Talk to us
-                </Link> */}
+                </Link>
             </nav>
         </div>
     </header>
