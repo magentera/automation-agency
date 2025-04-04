@@ -5,6 +5,13 @@ import type { NextRequest } from "next/server"
 export function middleware(request: NextRequest) {
   const isAuthenticated = request.cookies.get("authenticated")?.value === "true"
 
+
+    // If the user is not authenticated and not already on the login page, redirect to login
+    if (request.nextUrl.pathname.startsWith("/submission")) {
+        return NextResponse.next()
+      }
+
+      
   // If the user is not authenticated and not already on the login page, redirect to login
   if (!isAuthenticated && !request.nextUrl.pathname.startsWith("/login")) {
     return NextResponse.redirect(new URL("/login", request.url))
