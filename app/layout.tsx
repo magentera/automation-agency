@@ -10,7 +10,7 @@ export const metadata = {
   title: "Konuke - AI Workflows for the Enterprise",
   description:
     "Augment your workforce with AI workflows. Make your organization smarter.",
-  generator: 'v0.dev'
+  generator: ''
 }
 
 export default function RootLayout({
