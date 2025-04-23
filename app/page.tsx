@@ -15,7 +15,7 @@ export default function Home() {
     <section className="bg-blue-100/20 p-10">
       <InfoBox />
     </section>
-    <section id="solutions" >
+    <section id="solutions">
       <Services />
     </section>
     <section id="about">

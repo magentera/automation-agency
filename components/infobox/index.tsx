@@ -1,5 +1,5 @@
 import React from 'react';
-import TypeformPopup from '../typeformPopup';
+import CTAProvider from '../cta';
 
 export const InfoBox: React.FC = () => {
     return (
@@ -14,7 +14,7 @@ export const InfoBox: React.FC = () => {
                 Ready to discover how much inefficiency is costing you?
             </p>
             <div className='pt-10'>
-            <TypeformPopup hookType="button" text="Let's Find Out Together"/>
+            <CTAProvider hookType="button" text="Let's Find Out Together" ctaType={'redirect'}/>
             </div>
         </div>
     );

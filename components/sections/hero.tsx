@@ -2,26 +2,23 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronDown, ArrowRight } from "lucide-react"
 import InteractiveScene from "@/components/interactivelogo"
-import TypeformPopup, { HookType } from "../typeformPopup"
+import CTAProvider from "../cta"
 
 
 export default function Hero() {
   return (
     <div className="bg-white">
-      {/* Navigation */}
-
-
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            
-          <TypeformPopup hookType="text"/>
+
+            <CTAProvider hookType="text" ctaType={"redirect"} />
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-8">
               <span className="text-blue-500">Scale Smarter</span>
               <br />
               with AI & Automation-Driven Consulting
-              
+
             </h1>
 
             <div className="space-y-3 mb-10 text-lg">
@@ -34,7 +31,7 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-            <TypeformPopup hookType="button"/>
+              <CTAProvider hookType="button" ctaType="redirect" />
 
               <div className="text-blue-500 font-medium flex items-center justify-center">
                 Start for free <ArrowRight className="ml-2 h-4 w-4" />
