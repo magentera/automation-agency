@@ -7,7 +7,6 @@ interface TeamMember {
   title: string;
   imageUrl: string;
   bio: string;
-  testimonial?: string;
   ctaLabel?: string;
   ctaLink?: string;
 }
@@ -15,56 +14,50 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     name: 'Edward Stevenson',
-    title: 'Workflow Specialist',
-    imageUrl: '/images/sarah.jpg', // Replace with your image path
-    bio: 'Over a decade of experience streamlining business operations, saving companies time and resources with her efficient, people-centered approach.',
-    testimonial: '"Sarah’s automation strategies saved us 15 hours a week!" — Client A',
+    title: 'Director of Workflow Optimization & Founder',
+    imageUrl: '/images/ed.jpg',
+    bio: 'Leads the design and execution of end-to-end process improvements across core business units.',
     ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',
   },
   {
     name: 'Chelsa Lork',
-    title: 'Process Consultant',
-    imageUrl: '/images/david.jpg', // Replace with your image path
-    bio: 'Focuses on building scalable processes and optimizing team collaboration to unlock higher-level strategy work.',
-    testimonial: '"David’s guidance reduced our bottlenecks by 40%!" — Client B',
-    ctaLabel: 'Book a Free Consultation',
+    title: 'Strategy & Systems Advisor',
+    imageUrl: '/images/david.jpg',
+    bio: 'Acts as a strategic partner to clients, aligning business objectives with intelligent system design.',
+    ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',
   },
   {
     name: 'David Rach',
-    title: 'Operations Analyst',
-    imageUrl: '/images/emily.jpg', // Replace with your image path
-    bio: 'Specializes in data-driven insights that transform day-to-day workflows into streamlined, measurable successes.',
-    testimonial: '"Emily’s data insights changed our approach entirely!" — Client C',
-    ctaLabel: 'Get in Touch',
+    title: 'Senior Technical Implementation Consultant',
+    imageUrl: '/images/emily.jpg',
+    bio: 'Leads complex system implementations, integrations, and automation builds with a strategic lens and technical precision',
+    ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',
   },
   {
     name: 'Jared Stevenson',
-    title: 'Operations Analyst',
-    imageUrl: '/images/emily.jpg', // Replace with your image path
-    bio: 'Specializes in data-driven insights that transform day-to-day workflows into streamlined, measurable successes.',
-    testimonial: '"Emily’s data insights changed our approach entirely!" — Client C',
-    ctaLabel: 'Get in Touch',
+    title: 'Technical Implementation Consultant',
+    imageUrl: '/images/emily.jpg',
+    bio: 'Builds and deploys integrations, custom workflows, and automation systems that align with technical specifications and deliver operational efficiency.',
+    ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',
   },
   {
     name: 'Nathan Thomson',
-    title: 'Operations Analyst',
-    imageUrl: '/images/emily.jpg', // Replace with your image path
-    bio: 'Specializes in data-driven insights that transform day-to-day workflows into streamlined, measurable successes.',
-    testimonial: '"Emily’s data insights changed our approach entirely!" — Client C',
-    ctaLabel: 'Get in Touch',
+    title: 'Technical Implementation Consultant',
+    imageUrl: '/images/emily.jpg',
+    bio: 'Implements system builds, integrations, and automation workflows in alignment with defined strategies and business requirements.',
+    ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',
   },
   {
     name: 'Thomas Cahalane',
-    title: 'Operations Analyst',
-    imageUrl: '/images/emily.jpg', // Replace with your image path
-    bio: 'Specializes in data-driven insights that transform day-to-day workflows into streamlined, measurable successes.',
-    testimonial: '"Emily’s data insights changed our approach entirely!" — Client C',
-    ctaLabel: 'Get in Touch',
+    title: 'Technical Implementation Consultant',
+    imageUrl: '/images/emily.jpg', 
+    bio: 'Translates strategic plans into functional, scalable systems through precise implementation of integrations and automation solutions.',
+    ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',
   },
 ];
@@ -111,13 +104,6 @@ const TeamSection: React.FC = () => {
 
               {/* Bio */}
               <p className="mt-4 text-gray-600 text-sm">{member.bio}</p>
-
-              {/* Testimonial (optional) */}
-              {member.testimonial && (
-                <blockquote className="mt-4 text-sm italic text-gray-500">
-                  {member.testimonial}
-                </blockquote>
-              )}
 
               {/* CTA (optional) */}
               {member.ctaLabel && member.ctaLink && (
