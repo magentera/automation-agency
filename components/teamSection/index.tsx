@@ -16,14 +16,14 @@ const teamMembers: TeamMember[] = [
     name: 'Edward Stevenson',
     title: 'Director of Workflow Optimization & Founder',
     imageUrl: '/images/ed.jpg',
-    bio: 'Leads the design and execution of end-to-end process improvements across core business units.',
+    bio: 'Over a decade of experience streamlining business operations, saving companies time and resources with her efficient, people-centered approach.',
     ctaLabel: 'Schedule a Call',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
   {
     name: 'Chelsa Lork',
     title: 'Strategy & Systems Advisor',
-    imageUrl: '/images/david.jpg',
+    imageUrl: '/images/chelsa.jpg',
     bio: 'Acts as a strategic partner to clients, aligning business objectives with intelligent system design.',
     ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',
@@ -31,7 +31,7 @@ const teamMembers: TeamMember[] = [
   {
     name: 'David Rach',
     title: 'Senior Technical Implementation Consultant',
-    imageUrl: '/images/emily.jpg',
+    imageUrl: '/images/david.jpeg',
     bio: 'Leads complex system implementations, integrations, and automation builds with a strategic lens and technical precision',
     ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',
@@ -39,7 +39,7 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Jared Stevenson',
     title: 'Technical Implementation Consultant',
-    imageUrl: '/images/emily.jpg',
+    imageUrl: '/images/jared.jpeg',
     bio: 'Builds and deploys integrations, custom workflows, and automation systems that align with technical specifications and deliver operational efficiency.',
     ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',
@@ -47,7 +47,7 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Nathan Thomson',
     title: 'Technical Implementation Consultant',
-    imageUrl: '/images/emily.jpg',
+    imageUrl: '/images/nathan.jpeg',
     bio: 'Implements system builds, integrations, and automation workflows in alignment with defined strategies and business requirements.',
     ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',
@@ -55,7 +55,7 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Thomas Cahalane',
     title: 'Technical Implementation Consultant',
-    imageUrl: '/images/emily.jpg', 
+    imageUrl: '/images/thomas.jpeg', 
     bio: 'Translates strategic plans into functional, scalable systems through precise implementation of integrations and automation solutions.',
     ctaLabel: 'Schedule a Call',
     ctaLink: '/contact',

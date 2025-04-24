@@ -2,7 +2,7 @@
 import '@typeform/embed/build/css/popup.css'
 
 import React from 'react'
-import TypeformPopup from '../typeformPopup';
+import CTAProvider from '../cta';
 
 const servicesData = [
     {
@@ -41,9 +41,9 @@ const servicesData = [
 
 export default function Services() {
     return (
-        <div className="min-h-screen text-gray-800">
+        <div className="min-h-screen text-gray-800 bg-[radial-gradient(circle_at_1px_1px,_rgba(0,0,0,0.05)_0,_transparent_2px)] [background-size:8px_8px] bg-repeat">
             {/* Hero Section */}
-            <div className="relative overflow-hidden bg-white">
+            <div className="relative overflow-hidden">
                 <div className="mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:py-24">
                     <div className="text-center">
                         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -54,7 +54,7 @@ export default function Services() {
                             confidence. Let’s transform your business today.
                         </p>
                         <div className="mt-8 flex justify-center">
-                            <TypeformPopup hookType="button" text="Get Started" />
+                            <CTAProvider hookType="button" text="Get Started" ctaType={'redirect'} />
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ export default function Services() {
                                 </p>
                             </div>
                             <div className="mt-6 text-right">
-                                <TypeformPopup hookType="button" text="Learn More" />
+                                <CTAProvider hookType="button" text="Learn More" ctaType={'redirect'} />
                             </div>
                         </div>
                     ))}
@@ -97,7 +97,7 @@ export default function Services() {
                         your unique challenges and goals.
                     </p>
                     <div className="mt-8 flex justify-center">
-                        <TypeformPopup hookType="button" text="Book Your Consultation" />
+                        <CTAProvider hookType="button" text="Book Your Consultation" ctaType={'redirect'} />
                     </div>
                 </div>
             </div>

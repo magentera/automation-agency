@@ -1,5 +1,5 @@
 import React from "react";
-import TypeformPopup from "../typeformPopup";
+import CTAProvider from "../cta";
 
 const reasons = [
   {
@@ -36,10 +36,10 @@ export default function WhyChooseMe() {
         {/* Heading */}
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-extrabold text-gray-800 sm:text-4xl">
-            Why Choose Me
+            Why Choose Konuke
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-600">
-            Here’s what sets me apart from the rest.
+            Here’s what sets Konuke apart from the rest.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function WhyChooseMe() {
 
         {/* CTA */}
         <div className="mt-12 flex justify-center">
-          <TypeformPopup hookType="button" text="Let’s Talk" />
+          <CTAProvider hookType="button" text="Let’s Talk" ctaType={"redirect"} />
         </div>
       </div>
     </section>
