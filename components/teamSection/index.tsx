@@ -16,56 +16,50 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Edward Stevenson',
     title: 'Workflow Specialist',
-    imageUrl: '/images/sarah.jpg', // Replace with your image path
+    imageUrl: '/images/ed.jpg',
     bio: 'Over a decade of experience streamlining business operations, saving companies time and resources with her efficient, people-centered approach.',
-    testimonial: '"Sarah’s automation strategies saved us 15 hours a week!" — Client A',
     ctaLabel: 'Schedule a Call',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
   {
     name: 'Chelsa Lork',
     title: 'Process Consultant',
-    imageUrl: '/images/david.jpg', // Replace with your image path
+    imageUrl: '/images/chelsa.jpg',
     bio: 'Focuses on building scalable processes and optimizing team collaboration to unlock higher-level strategy work.',
-    testimonial: '"David’s guidance reduced our bottlenecks by 40%!" — Client B',
     ctaLabel: 'Book a Free Consultation',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
   {
     name: 'David Rach',
     title: 'Operations Analyst',
-    imageUrl: '/images/emily.jpg', // Replace with your image path
+    imageUrl: '/images/david.jpeg',
     bio: 'Specializes in data-driven insights that transform day-to-day workflows into streamlined, measurable successes.',
-    testimonial: '"Emily’s data insights changed our approach entirely!" — Client C',
     ctaLabel: 'Get in Touch',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
   {
     name: 'Jared Stevenson',
     title: 'Operations Analyst',
-    imageUrl: '/images/emily.jpg', // Replace with your image path
+    imageUrl: '/images/jared.jpeg',
     bio: 'Specializes in data-driven insights that transform day-to-day workflows into streamlined, measurable successes.',
-    testimonial: '"Emily’s data insights changed our approach entirely!" — Client C',
     ctaLabel: 'Get in Touch',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
   {
     name: 'Nathan Thomson',
     title: 'Operations Analyst',
-    imageUrl: '/images/emily.jpg', // Replace with your image path
+    imageUrl: '/images/nathan.jpeg',
     bio: 'Specializes in data-driven insights that transform day-to-day workflows into streamlined, measurable successes.',
-    testimonial: '"Emily’s data insights changed our approach entirely!" — Client C',
     ctaLabel: 'Get in Touch',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
   {
     name: 'Thomas Cahalane',
     title: 'Operations Analyst',
-    imageUrl: '/images/emily.jpg', // Replace with your image path
+    imageUrl: '/images/thomas.jpeg',
     bio: 'Specializes in data-driven insights that transform day-to-day workflows into streamlined, measurable successes.',
-    testimonial: '"Emily’s data insights changed our approach entirely!" — Client C',
     ctaLabel: 'Get in Touch',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
 ];
 
