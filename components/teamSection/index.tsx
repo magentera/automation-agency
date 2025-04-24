@@ -16,7 +16,7 @@ const teamMembers: TeamMember[] = [
     name: 'Edward Stevenson',
     title: 'Director of Workflow Optimization & Founder',
     imageUrl: '/images/ed.jpg',
-    bio: 'Over a decade of experience streamlining business operations, saving companies time and resources with her efficient, people-centered approach.',
+    bio: 'Over a decade of experience streamlining business operations, saving companies time and resources with his efficient, people-centered approach.',
     ctaLabel: 'Schedule a Call',
     ctaLink: '/meetings/initial-consultation',
   },
