@@ -79,7 +79,7 @@ export default function Services() {
                                 </p>
                             </div>
                             <div className="mt-6 text-right">
-                                <CTAProvider hookType="button" text="Learn More" ctaType={'redirect'} />
+                                <CTAProvider hookType="button" text="Get Started" ctaType={'redirect'} />
                             </div>
                         </div>
                     ))}

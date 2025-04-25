@@ -26,7 +26,7 @@ const teamMembers: TeamMember[] = [
     imageUrl: '/images/chelsa.jpg',
     bio: 'Acts as a strategic partner to clients, aligning business objectives with intelligent system design.',
     ctaLabel: 'Schedule a Call',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
   {
     name: 'David Rach',
@@ -34,7 +34,7 @@ const teamMembers: TeamMember[] = [
     imageUrl: '/images/david.jpeg',
     bio: 'Leads complex system implementations, integrations, and automation builds with a strategic lens and technical precision',
     ctaLabel: 'Schedule a Call',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
   {
     name: 'Jared Stevenson',
@@ -42,7 +42,7 @@ const teamMembers: TeamMember[] = [
     imageUrl: '/images/jared.jpeg',
     bio: 'Builds and deploys integrations, custom workflows, and automation systems that align with technical specifications and deliver operational efficiency.',
     ctaLabel: 'Schedule a Call',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
   {
     name: 'Nathan Thomson',
@@ -50,7 +50,7 @@ const teamMembers: TeamMember[] = [
     imageUrl: '/images/nathan.jpeg',
     bio: 'Implements system builds, integrations, and automation workflows in alignment with defined strategies and business requirements.',
     ctaLabel: 'Schedule a Call',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
   {
     name: 'Thomas Cahalane',
@@ -58,7 +58,7 @@ const teamMembers: TeamMember[] = [
     imageUrl: '/images/thomas.jpeg', 
     bio: 'Translates strategic plans into functional, scalable systems through precise implementation of integrations and automation solutions.',
     ctaLabel: 'Schedule a Call',
-    ctaLink: '/contact',
+    ctaLink: '/meetings/initial-consultation',
   },
 ];
 
@@ -103,7 +103,7 @@ const TeamSection: React.FC = () => {
               </div>
 
               {/* Bio */}
-              <p className="mt-4 text-gray-600 text-sm">{member.bio}</p>
+              <p className="mt-4 text-gray-600 text-sm min-h-[80px]">{member.bio}</p>
 
               {/* CTA (optional) */}
               {member.ctaLabel && member.ctaLink && (
@@ -130,7 +130,7 @@ const TeamSection: React.FC = () => {
             free up your time for higher-level strategic work.
           </p>
           <a
-            href="/contact"
+            href="/meetings/initial-consultation"
             className="mt-4 inline-block px-8 py-3 bg-indigo-600 text-white font-medium rounded hover:bg-indigo-700 transition-colors"
           >
             Book a Free Consultation

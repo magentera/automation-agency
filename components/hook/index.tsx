@@ -29,7 +29,7 @@ export default function Hook() {
             Get Started
           </a>
           <a
-            href="#"
+            href="#solutions"
             className="inline-flex items-center justify-center px-6 py-3 border border-indigo-600 text-indigo-600 bg-white text-base font-medium rounded-md hover:bg-indigo-50 shadow"
           >
             Learn More
