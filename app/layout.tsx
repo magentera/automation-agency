@@ -21,11 +21,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const isAuthenticated = cookies().get("authenticated")?.value === "true"
+  // const isAuthenticated = cookies().get("authenticated")?.value === "true"
   return (
     <html lang="en">
       <body className={inter.className}>
-        {isAuthenticated && <Header />}
+        {/* {isAuthenticated && <Header />} */}
+        <Header />
         {children}
       </body>
       <GoogleAnalytics gaId="G-765DPMG65T" />
