@@ -29,7 +29,7 @@ export default function Header() {
                 <Link href="#faq" className="text-gray-700 hover:text-gray-900 font-medium">
                     FAQ
                 </Link>
-                <Link href="#contact" className="text-gray-700 hover:text-gray-900 font-medium">
+                <Link href="/meetings/initial-consultation" className="text-gray-700 hover:text-gray-900 font-medium">
                     Talk to us
                 </Link>
             </nav>
