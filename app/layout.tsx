@@ -3,6 +3,8 @@ import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import Header from "@/components/header"
 import { cookies } from "next/headers"
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -26,6 +28,7 @@ export default function RootLayout({
         {isAuthenticated && <Header />}
         {children}
       </body>
+      <GoogleAnalytics gaId="G-765DPMG65T" />
     </html>
   )
 }
