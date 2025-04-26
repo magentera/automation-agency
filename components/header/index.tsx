@@ -16,17 +16,17 @@ export default function Header() {
                 />
                 <span className="font-bold">KONUKE</span>
             </Link>
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="flex items-center space-x-6">
                 <div className="flex items-center">
-                    <Link href="#solutions" className="text-gray-700 hover:text-gray-900 font-medium">
+                    <Link href="/#solutions" className="text-gray-700 hover:text-gray-900 font-medium hidden md:block">
                         Services
                     </Link>
                     {/* <ChevronDown className="ml-1 h-4 w-4 text-gray-500" /> */}
                 </div>
-                <Link href="#team" className="text-gray-700 hover:text-gray-900 font-medium">
+                <Link href="/#team" className="text-gray-700 hover:text-gray-900 font-medium hidden md:block">
                     Team
                 </Link>
-                <Link href="#faq" className="text-gray-700 hover:text-gray-900 font-medium">
+                <Link href="/#faq" className="text-gray-700 hover:text-gray-900 font-medium hidden md:block">
                     FAQ
                 </Link>
                 <Link href="/meetings/initial-consultation" className="text-gray-700 hover:text-gray-900 font-medium">

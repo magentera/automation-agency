@@ -3,6 +3,7 @@ import BookingPageSections from "@/components/bookingPageSections";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { InlineWidget } from "react-calendly";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function DownArrow() {
     return (
@@ -52,7 +53,9 @@ export default function InitialConsultation() {
                             <div className="flex flex-col sm:flex-row gap-4">
 
                                 <div className="text-blue-500 font-medium flex items-center justify-center">
+                                    <Link href='#calendly' className="flex items-center">
                                     Start for free <ArrowRight className="ml-2 h-4 w-4" />
+                                    </Link>
                                 </div>
                             </div>
                         </div>

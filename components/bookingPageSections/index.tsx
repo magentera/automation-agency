@@ -50,7 +50,7 @@ export default function BookingPageSections() {
 
 
       {/* Section 4: Social Proof Slider */}
-      <div className="relative bg-gradient-to-r from-indigo-600 to-violet-600 py-14 -mx-6">
+      <div className="relative bg-gradient-to-r from-indigo-600 to-violet-600 py-14 lg:-mx-6 -mx-[16px]">
         <h2 className="text-center text-white text-3xl font-semibold mb-10">Real Results. Zero Guesswork.</h2>
 
         {/* <div className="flex justify-center mb-6 gap-4">
@@ -157,7 +157,7 @@ export default function BookingPageSections() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="bg-indigo-600 text-white py-16 text-center rounded-2xl mx-4"
+        className="bg-indigo-600 text-white py-16 text-center lg:rounded-2xl rounded-none -mx-[16px] lg:mx-4"
       >
         <h2 className="text-3xl font-semibold mb-6">Last Step: Lock Your Time Slot Before This Week Fills Up.</h2>
         <Button asChild size="lg" variant="secondary">

@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
+      <section className="container mx-auto px-4 lg:py-16 pt-4 pb-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
 
