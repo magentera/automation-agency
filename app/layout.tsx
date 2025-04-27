@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     site:        '@connectKonuke',
     title:       'Augment your workforce with AI workflows. Make your organization smarter.',
     description:
-      'LAugment your workforce with AI workflows. Make your organization smarter.',
+      'Augment your workforce with AI workflows. Make your organization smarter.',
     images: ['https://konuke.com/og/konuke.png'],
   },
 };
