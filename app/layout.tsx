@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     url:   'https://konuke.com/',
     title: 'Konuke – Workflow Optimisation & AI Automation',
     description:
-      'Lean, AI-powered workflows that slash enterprise ops costs by 38 %.',
+      'Augment your workforce with AI workflows. Make your organization smarter.',
     images: ['https://konuke.com/og/konuke.png'],
   },
 
   twitter: {
     card:        'summary_large_image',
     site:        '@connectKonuke',
-    title:       'Augment your workforce with AI workflows. Make your organization smarter.',
+    title:       'Konuke – Workflow Optimisation & AI Automation',
     description:
       'Augment your workforce with AI workflows. Make your organization smarter.',
     images: ['https://konuke.com/og/konuke.png'],
