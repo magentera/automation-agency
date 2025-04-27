@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title:       'Konuke – Workflow Optimisation & AI Automation',
     description:
       'Augment your workforce with AI workflows. Make your organization smarter.',
-    images: ['https://konuke.com/og/konuke.png'],
+    images: ['https://konuke.com/og/konuke-1200x630.png'],
   },
 };
 
